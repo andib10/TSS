@@ -9,8 +9,8 @@ public class EquivalencePartition {
         int[] height = {};
         int[] height2 = {1000};
 
-        assertEquals(-1, Main.maxArea(height));
-        assertEquals(-1, Main.maxArea(height2));
+        assertEquals(-1, Main.maxArea(height, height.length));
+        assertEquals(-1, Main.maxArea(height2, height2.length));
     }
 
     @Test
@@ -18,8 +18,8 @@ public class EquivalencePartition {
         int[] height = {-10};
         int[] height2 = {20000};
 
-        assertEquals(-1, Main.maxArea(height));
-        assertEquals(-1, Main.maxArea(height2));
+        assertEquals(-1, Main.maxArea(height, height.length));
+        assertEquals(-1, Main.maxArea(height2, height2.length));
     }
 
     @Test
@@ -27,8 +27,8 @@ public class EquivalencePartition {
         int[] height = {2, 4, 6, 3, 7, 10};
         int[] height2 = {100, 3, 400, 150, 200};
 
-        assertEquals(18, Main.maxArea(height));
-        assertEquals(400, Main.maxArea(height2));
+        assertEquals(18, Main.maxArea(height, height.length));
+        assertEquals(400, Main.maxArea(height2, height2.length));
     }
 
     @Test
@@ -36,8 +36,8 @@ public class EquivalencePartition {
         int[] height = {2, -4, 6, 3, -7, 10};
         int[] height2 = {100, 3, 400, 150, 200000};
 
-        assertEquals(-2, Main.maxArea(height));
-        assertEquals(-2, Main.maxArea(height2));
+        assertEquals(-2, Main.maxArea(height, height.length));
+        assertEquals(-2, Main.maxArea(height2, height2.length));
     }
 
     @Test
@@ -54,8 +54,8 @@ public class EquivalencePartition {
             arr2[i] = i % 500 ;
         }
 
-        assertEquals(-1, Main.maxArea(arr));
-        assertEquals(-1, Main.maxArea(arr2));
+        assertEquals(-1, Main.maxArea(arr, arr.length));
+        assertEquals(-1, Main.maxArea(arr2, arr2.length));
     }
 
     @Test
@@ -72,8 +72,8 @@ public class EquivalencePartition {
             arr2[i] = i % 500 - 4 ;
         }
 
-        assertEquals(-1, Main.maxArea(arr));
-        assertEquals(-1, Main.maxArea(arr2));
+        assertEquals(-1, Main.maxArea(arr, arr.length));
+        assertEquals(-1, Main.maxArea(arr2, arr2.length));
     }
 
 }

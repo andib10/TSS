@@ -63,37 +63,35 @@ Boundary testing:
 
 public class Main {
     public static void main(String[] args){
-        //int [] height = {1,8,6,2,5,4,8,3,7};
-        //System.out.println(maxArea(height));
+
     }
 
-    public static int maxArea(int[] height) {
-
-
-        if (height.length < 2 || height.length > 100000) {
-            return -1;
-        }
-
-        for (int h : height) {
-            if (h < 0 || h > 10000) {
-                return -2;
-            }
-        }
+    public static int maxArea(int[] height, int n) {
 
         int leftPointer = 0;
-        int rightPointer = height.length - 1;
+        int rightPointer = n - 1;
         int maxArea = 0;
 
-        while (leftPointer < rightPointer) {
-            int currentArea = Math.min(height[leftPointer], height[rightPointer]) * (rightPointer - leftPointer);
-            maxArea = Math.max(maxArea, currentArea);
+        if (n < 2 || n > 100000) { //1
+            return -1; //2
+        }
 
-            if (height[leftPointer] < height[rightPointer]) {
-                leftPointer++;
-            } else {
-                rightPointer--;
+        for (int i = 0; i < n; i++) { //3
+            if (height[i] < 0 || height[i] > 10000) { //4
+                return -2; //5
             }
         }
-        return maxArea;
+
+        while (leftPointer < rightPointer) { //6
+            int currentArea = Math.min(height[leftPointer], height[rightPointer]) * (rightPointer - leftPointer); //7
+            maxArea = Math.max(maxArea, currentArea); //8
+
+            if (height[leftPointer] < height[rightPointer]) { //9
+                leftPointer++; //10
+            } else {
+                rightPointer--; //11
+            }
+        }
+        return maxArea; //12
     }
 }

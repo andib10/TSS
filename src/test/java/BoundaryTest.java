@@ -6,16 +6,16 @@ public class BoundaryTest {
     public void c11() {
         int[] height = {0};
         int[] height2 = {10000};
-        assertEquals(-1, Main.maxArea(height));
-        assertEquals(-1, Main.maxArea(height2));
+        assertEquals(-1, Main.maxArea(height, height.length));
+        assertEquals(-1, Main.maxArea(height2, height2.length));
     }
 
     @Test
     public void c12() {
         int[] height = {-1};
         int[] height2 = {10001};
-        assertEquals(-1, Main.maxArea(height));
-        assertEquals(-1, Main.maxArea(height2));
+        assertEquals(-1, Main.maxArea(height, height.length));
+        assertEquals(-1, Main.maxArea(height2, height2.length));
     }
 
     @Test
@@ -33,10 +33,10 @@ public class BoundaryTest {
             height4[i] = 10000;
         }
 
-        assertEquals(0, Main.maxArea(height));
-        assertEquals(10000, Main.maxArea(height2));
-        assertEquals(0, Main.maxArea(height3));
-        assertEquals(999990000, Main.maxArea(height4));
+        assertEquals(0, Main.maxArea(height, height.length));
+        assertEquals(10000, Main.maxArea(height2, height2.length));
+        assertEquals(0, Main.maxArea(height3, height3.length));
+        assertEquals(999990000, Main.maxArea(height4, height4.length));
     }
 
     @Test
@@ -70,14 +70,14 @@ public class BoundaryTest {
             height8[i] = 10001;
         }
 
-        assertEquals(-2, Main.maxArea(height));
-        assertEquals(-2, Main.maxArea(height2));
-        assertEquals(-2, Main.maxArea(height3));
-        assertEquals(-2, Main.maxArea(height4));
-        assertEquals(-2, Main.maxArea(height5));
-        assertEquals(-2, Main.maxArea(height6));
-        assertEquals(-2, Main.maxArea(height7));
-        assertEquals(-2, Main.maxArea(height8));
+        assertEquals(-2, Main.maxArea(height, height.length));
+        assertEquals(-2, Main.maxArea(height2, height2.length));
+        assertEquals(-2, Main.maxArea(height3, height3.length));
+        assertEquals(-2, Main.maxArea(height4, height4.length));
+        assertEquals(-2, Main.maxArea(height5, height5.length));
+        assertEquals(-2, Main.maxArea(height6, height6.length));
+        assertEquals(-2, Main.maxArea(height7, height7.length));
+        assertEquals(-2, Main.maxArea(height8, height8.length));
     }
 
     @Test
@@ -93,8 +93,8 @@ public class BoundaryTest {
             height2[i] = 10000;
         }
 
-        assertEquals(-1, Main.maxArea(height));
-        assertEquals(-1, Main.maxArea(height2));
+        assertEquals(-1, Main.maxArea(height, height.length));
+        assertEquals(-1, Main.maxArea(height2, height2.length));
     }
 
     @Test
@@ -121,10 +121,10 @@ public class BoundaryTest {
             height4[i] = 10001;
         }
 
-        assertEquals(-1, Main.maxArea(height));
-        assertEquals(-1, Main.maxArea(height2));
-        assertEquals(-1, Main.maxArea(height3));
-        assertEquals(-1, Main.maxArea(height4));
+        assertEquals(-1, Main.maxArea(height, height.length));
+        assertEquals(-1, Main.maxArea(height2, height2.length));
+        assertEquals(-1, Main.maxArea(height3, height3.length));
+        assertEquals(-1, Main.maxArea(height4, height4.length));
     }
 
 }
