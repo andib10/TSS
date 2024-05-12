@@ -226,7 +226,7 @@ public class AllTests {
         }
 
         int[] height5 = {10002, 4, 8};
-        
+
 
         assertEquals(-1, Main.maxArea(height, height.length));
         assertEquals(-2, Main.maxArea(height2, height2.length));

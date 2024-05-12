@@ -62,9 +62,7 @@ Boundary testing:
 
 
 public class Main {
-    public static void main(String[] args){
 
-    }
 
     public static int maxArea(int[] height, int n) {
 
@@ -94,4 +92,5 @@ public class Main {
         }
         return maxArea; //12
     }
+
 }
