@@ -4,6 +4,9 @@ import org.junit.Test;
 public class CoverageTest {
     @Test
     public void coverage() {
+
+        Main main = new Main();
+
         int[] height = {0};
 
         int[] height2 = {3, 2, -1, 6};
